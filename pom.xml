@@ -11,6 +11,10 @@
 	</parent>
 	<groupId>com.neo.employee.app</groupId>
 	<artifactId>employeerestapi </artifactId>
+<<<<<<< main
+=======
+	<version>0.0.1-SNAPSHOT</version>
+>>>>>>> 55eab90 version test commit
 	<name>employeerestapi </name>
 	<description>Employee CRUD RestAPI</description>
 	<properties>
