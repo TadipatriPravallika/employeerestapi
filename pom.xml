@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.6.2</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.neo.employee.app</groupId>
 	<artifactId>employeerestapi </artifactId>
-<<<<<<< main
-=======
 	<version>0.0.1-SNAPSHOT</version>
->>>>>>> 55eab90 version test commit
 	<name>employeerestapi </name>
 	<description>Employee CRUD RestAPI</description>
 	<properties>
@@ -31,19 +27,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-
-		<!-- MySQL -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.27</version>
-		</dependency>
-
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        
+        <!-- MySQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.27</version>
+            </dependency>
+		
 	</dependencies>
 
 	<build>
@@ -52,113 +48,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>3.2.0</version>
-				<executions>
-					<execution>
-						<id>parse-version</id>
-						<goals>
-							<goal>parse-version</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.8.1</version>
-			</plugin>
-
 		</plugins>
 	</build>
-	<profiles>
-		<profile>
-			<id>bump-patch</id>
-			<activation>
-				<property>
-					<name>bumpPatch</name>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>versions-maven-plugin</artifactId>
-
-						<executions>
-							<execution>
-								<goals>
-									<goal>set</goal>
-								</goals>
-								<phase>validate</phase>
-								<configuration>
-									<newVersion>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.nextIncrementalVersion}</newVersion>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>bump-minor</id>
-			<activation>
-				<property>
-					<name>bumpMinor</name>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>versions-maven-plugin</artifactId>
-
-						<executions>
-							<execution>
-								<goals>
-									<goal>set</goal>
-								</goals>
-								<phase>validate</phase>
-								<configuration>
-									<newVersion>${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.0</newVersion>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>bump-major</id>
-			<activation>
-				<property>
-					<name>bumpMajor</name>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>versions-maven-plugin</artifactId>
-
-						<executions>
-							<execution>
-								<goals>
-									<goal>set</goal>
-								</goals>
-								<phase>validate</phase>
-								<configuration>
-									<newVersion>${parsedVersion.nextMajorVersion}.0.0</newVersion>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-
 </project>
